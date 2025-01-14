@@ -2,16 +2,20 @@ from flask import Flask
 from flask import render_template
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
-from db import db
-from models.models import User, Devotional, Comments
+
 
 app = Flask(__name__, template_folder="views")
 
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///site.db"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
-db = SQLAlchemy(app)
+from db import db
+
+db.init_app(app)
+
 migrate = Migrate(app, db)
+
+from models.models import User, Devotional, Comments
 
 
 @app.route("/")

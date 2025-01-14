@@ -1,0 +1,27 @@
+{% extends "index.html" %}
+
+{%block styles%}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/newDevotional.css') }}">
+{%endblock%}
+
+{% block content %}
+<h1>Welcome to Bible is Open!</h1>
+<p>Explore our devotions and share your own.</p>
+<form>
+    <div class="form-item">
+        <label for="title">Tema:</label>
+        <input id="title" placeholder="Coloque um Título" required>
+    </div>
+
+    <div class="form-item">
+        <label for="description">Conteudo</label>
+        <textarea placeholder="Conte o texto referência, e o que Deus te ensinou neste texto"></textarea>
+    </div>
+    <div class="form-item, folder">
+        <label for="img">Se desejar, coloque uma imagem que represente o seu tema!</label>
+        <input type="file" id="img">
+    </div>
+    <br>
+    <button type="submit">Enviar</button>
+</form>
+{% endblock %}

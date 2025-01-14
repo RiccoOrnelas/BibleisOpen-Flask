@@ -1,0 +1,29 @@
+# Ignora o ambiente virtual
+venv/
+bioflask/
+
+Lib/
+Scripts/
+pyvenv.cfg
+Include/
+# Ignora arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Ignora os arquivos de configuração do IDE
+.vscode/
+.idea/
+
+# Ignora arquivos de log
+*.log
+
+# Ignora banco de dados SQLite
+*.sqlite3
+*.db
+
+# Ignora o diretório de uploads temporários
+instance/
+
+# Ignora arquivos de configuração secretos (como chaves e senhas)
+*.env
+*.flaskenv

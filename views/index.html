@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible is Open</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+    {%block styles%} {%endblock%}
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a class="brand" href="{{url_for('home')}}">
+                <img class="brand" src="{{url_for('static', filename='assets/bible-icon.png')}}" alt="Bible Icon">
+                <h2>Bible is Open</h2>
+            </a>
+            <ul class="links">
+                <li><a href="{{url_for('home')}}">Home</a></li>
+                <li id="add"><a href="{{url_for('newDevotional')}}">New Devotionals</a></li>
+                <li><a href="{{url_for('about')}}">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="cont">
+        {% block content %}
+
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2020 Bible is Open</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+.about-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20%;
+    margin-right: 20%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-content h3 {
+    color:
+        #118fd2;
+}
+
+.about-content h2 {
+    margin-top: 10px;
+
+}

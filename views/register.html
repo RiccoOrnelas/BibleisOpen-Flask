@@ -1,0 +1,35 @@
+{%extends "index.html"%}
+
+{%block styles%}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/register.css') }}">
+{%endblock%}
+
+
+{%block content%}
+
+<div class="container">
+
+    <div class="title">
+        <h1>Resgistre-se!</h1>
+        <p>Faça parte desta comunidade que examina a Palavra para ficar mais parecidos com Cristo!</p>
+    </div>
+
+    <form method="POST" action="/createUser">
+        <div class="form-item">
+            <label for="name">Nome:</label>
+            <input name="name" id="name" placeholder="Entre com seu Nome" required>
+        </div>
+
+        <div class="form-item">
+            <label for="email">Email:</label>
+            <input name="email" placeholder="Seu Email" id="email" required>
+        </div>
+        <div class="form-item">
+            <label for="password">Crie uma Senha:</label>
+            <input name="password" placeholder="Crie uma senha" id="password" required>
+        </div>
+        <br>
+        <button type="submit">Registrar</button>
+    </form>
+</div>
+{%endblock%}

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bible is Open</title>
+    <title>{%block title%} Bible is Open {%endblock%}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
     {%block styles%} {%endblock%}
 </head>
@@ -19,7 +19,9 @@
             <ul class="links">
                 <li><a href="{{url_for('home')}}">Home</a></li>
                 <li id="add"><a href="{{url_for('newDevotional')}}">New Devotionals</a></li>
+                <li><a href="{{url_for('register')}}">Registro</a></li>
                 <li><a href="{{url_for('about')}}">About</a></li>
+                <li><a href="{{url_for('login')}}">Login</a></li>
             </ul>
         </nav>
     </header>

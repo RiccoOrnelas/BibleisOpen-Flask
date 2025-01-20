@@ -1,5 +1,5 @@
 from datetime import datetime
-from db import db  # Importando a instância db de models/__init__.py
+from db import db  # Import the db object from the db module
 
 
 class User(db.Model):
@@ -18,7 +18,7 @@ class Devotional(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
 
-    user = db.relationship("User", backref="devotionals", lazy=True)
+    user = db.relationship("User", backref="user_devotionals", lazy=True)
 
 
 class Comments(db.Model):
